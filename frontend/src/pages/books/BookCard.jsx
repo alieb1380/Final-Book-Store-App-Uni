@@ -3,15 +3,16 @@ import { getImgUrl } from '../../utils/getImgUrl'
 
 import { Link } from'react-router-dom'
 
-// import { useDispatch } from'react-redux'
-// import { addToCart } from '../../redux/features/cart/cartSlice'
+import { useDispatch } from'react-redux'
+import { addToCart } from '../../redux/features/cart/cartSlice'
 
 const BookCard = ({book}) => {
-    // const dispatch =  useDispatch();
+    const dispatch =  useDispatch();
 
-    // const handleAddToCart = (product) => {
-    //     dispatch(addToCart(product))
-    // }
+    const handleAddToCart = (product) => {
+        dispatch(addToCart(product))
+    }
+    
     return (
         <div className=" rounded-lg transition-shadow duration-300">
             <div
